@@ -1,4 +1,5 @@
-import Expenses from './components/Expenses';
+import Expenses from "./components/Expenses/Expenses";
+import Card from './components/UI/Card';
 
 function App() {
 
@@ -30,12 +31,12 @@ function App() {
   //   React.createElement('h2', {}, "Let's get started!"),
   //   React.createElement(Expenses, { items: expenses })
   // );
-  
+
 
   return (
-    <div>
+    <Card>
       <Expenses items={expenses} />
-    </div>
+    </Card>
   );
 }
 
