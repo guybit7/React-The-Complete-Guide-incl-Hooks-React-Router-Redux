@@ -2,8 +2,10 @@ import './ExpenseItem.css';
 
 import Card from "../UI/Card";
 import ExpenseDate from './ExpenseDate';
+import MsButton from '../UI/MsButton';
 
-function ExpenseItem(props) {
+
+const ExpenseItem = (props) => {
 
     return (
         <Card className="expense-item">
@@ -16,6 +18,7 @@ function ExpenseItem(props) {
                     {props.amount}
                 </div>
             </div>
+            <MsButton text={'Change Title'} id={'expense-item-change-title-btn-'+props.id}/>
         </Card>
     );
 }
