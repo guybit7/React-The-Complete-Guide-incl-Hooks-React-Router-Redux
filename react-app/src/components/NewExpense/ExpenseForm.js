@@ -2,7 +2,7 @@ import React, { userState, useState } from 'react';
 // import MsButton from '../UI/MsButton';
 import './ExpenseForm.css';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
 
     // ---> option A - Using One state 
     const [enteredTitle, setEnterdTitle] = useState('');
@@ -56,8 +56,9 @@ const ExpenseForm = () => {
             amount: enteredAmount,
             date: new Date(enteredDate),
         }
-        console.log(expenseData);
+        props.onSaveExpenseData(expenseData);
         initForm();
+
     };
 
     const initForm = () => {
