@@ -10,7 +10,7 @@ const NewExpense = (props) => {
             id: Math.random().toString()
         }
         console.log(expenseData);
-        props.onAddExpenseHanlder(expenseData)
+        props.onAddExpense(expenseData)
     }
 
     return (<div className='new-expense'>
