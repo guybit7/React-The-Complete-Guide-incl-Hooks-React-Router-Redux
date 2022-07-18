@@ -31,9 +31,9 @@ const App = () => {
   //   React.createElement(Expenses, { items: expenses })
   // );
 
-  const addExpenseHanlder = expense => {
+  const addExpenseHanlder = expenseData => {
     console.log('in App.js')
-    console.log(expense);
+    console.log(expenseData);
   }
 
   return (
