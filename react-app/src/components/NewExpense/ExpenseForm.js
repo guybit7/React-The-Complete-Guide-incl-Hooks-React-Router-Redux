@@ -4,6 +4,7 @@ import './ExpenseForm.css';
 
 const ExpenseForm = () => {
 
+    // ---> option A - Using One state 
     const [enteredTitle, setEnterdTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
@@ -19,6 +20,34 @@ const ExpenseForm = () => {
     const dateChangeHandler = (event) => {
         setEnteredDate(event.target.value)
     }
+
+    // ---> option B - Using multiple state:
+    /*
+        const [userInput, setUserInput] = useState({
+        enteredTitle: '',
+        enteredAmount: '',
+        enteredDate: ''
+    });
+
+
+    const titleChangeHandler = (event) => {
+        setUserInput((prevState) => {
+            return { ...prevState, enteredTitle: event.target.value }
+        });
+    };
+
+    const amountChangeHandler = (event) => {
+        setUserInput((prevState) => {
+            return { ...prevState, enteredAmount: event.target.value }
+        });
+    };
+
+    const dateChangeHandler = (event) => {
+        setUserInput((prevState) => {
+            return { ...prevState, enteredDate: event.target.value }
+        });
+    };
+*/
 
     return <form>
         <div className='new-expense__controls'>
