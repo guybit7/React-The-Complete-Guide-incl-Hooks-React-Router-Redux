@@ -58,7 +58,6 @@ const ExpenseForm = (props) => {
         }
         props.onSaveExpenseData(expenseData);
         initForm();
-
     };
 
     const initForm = () => {
@@ -83,6 +82,7 @@ const ExpenseForm = (props) => {
             </div>
         </div>
         <div className='new-expense__actions'>
+            <button onClick={props.onStopEditingHandling}>Cancel</button>
             <button type='submit'>Add Expense</button>
             {/* <MsButton text={'Add Expense'} id={'add-expense-title-btn'} clickHandler={() => clickSubmit()} /> */}
 
