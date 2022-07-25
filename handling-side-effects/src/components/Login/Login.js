@@ -12,6 +12,14 @@ const Login = (props) => {
   const [formIsValid, setFormIsValid] = useState(false);
 
   useEffect(() => {
+    console.log("enteredPassword changed")
+    return () => {
+      console.log("enteredPassword EFFECT cleanup!");
+    };
+  }, [enteredPassword]);
+
+
+  useEffect(() => {
     const t = setTimeout(() => {
       console.log("inside useEffect function");
       setFormIsValid(
